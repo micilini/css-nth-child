@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<title>Exercícios de Nth-Child</title>
+<head>
+<style>
+html, body{
+margin:20px;
+background-color: #273c75;
+margin:0 auto;
+text-align:center;
+}
+.logo_t{
+width:40%;
+}
+p{
+color:white;
+font-family: Arial, Helvetica, sans-serif;
+font-size:18px;
+width:100%;
+}
+hr{
+margin-top:40px;
+margin-bottom:40px;
+width:60%;
+}
+.bot{
+display: flex;
+width: 100%;
+justify-content: center;
+}
+.cubo_1, .cubo_2, .cubo_3, .cubo_4, .cubo_5, .cubo_6, .cubo_7, .cubo_8, .cubo_9, .cubo_10, .cubo_11{
+float:left;
+width:40px;
+height:40px;
+border-radius:5px;
+background-color:#2d3436;
+margin-left:20px;
+color:white;
+line-height:40px;
+}
+.mb-60{
+margin-bottom:60px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<img src="./logo-nth-child.svg" class="logo_t" />
+</header>
+
+<hr />
+
+<section>
+<p>A pseudo-classe :nth-child() faz a correspondência a elementos com base em sua posição entre um grupo de irmãos.</p>
+<p>Com ela nós podemos selecionar elementos HTML que existem dentro de outros.</p>
+<p>Exemplo: “CSS, selecione o primeiro elemento dentro da div cuja class é cubo, e pinte de amarelo”.</p>
+</section>
+
+<hr />
+
+<!-- Função: "Selecione a primeira ocorrência do elemento .cubo_1" -->
+
+<style>
+.cubo_1:first-child{background-color: yellow; color:black }
+</style>
+
+<p>cubo_1:first-child{background-color: yellow; color:black }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_1">1</div>
+<div id="dois" class="cubo_1">2</div>
+<div id="tres" class="cubo_1">3</div>
+<div id="quatro" class="cubo_1">4</div>
+<div id="cinco" class="cubo_1">5</div>
+<div id="seis" class="cubo_1">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Selecione a última ocorrência do elemento cubo_2" -->
+
+<style>
+.cubo_2:last-child{background-color: yellow; color:black }
+</style>
+
+<p>.cubo_2:last-child{background-color: yellow; color:black; }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_2">1</div>
+<div id="dois" class="cubo_2">2</div>
+<div id="tres" class="cubo_2">3</div>
+<div id="quatro" class="cubo_2">4</div>
+<div id="cinco" class="cubo_2">5</div>
+<div id="seis" class="cubo_2">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Seleciona a segunda ocorrência do elemento cubo_3" -->
+
+<style>
+.cubo_3:nth-child(2){background-color: yellow; color:black }
+</style>
+
+<p>.cubo_3:nth-child(2){background-color: yellow; color:black; }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_3">1</div>
+<div id="dois" class="cubo_3">2</div>
+<div id="tres" class="cubo_3">3</div>
+<div id="quatro" class="cubo_3">4</div>
+<div id="cinco" class="cubo_3">5</div>
+<div id="seis" class="cubo_3">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Selecione o último elemento da class ‘cubo’, e vá para o 2º elemento começando pelo último." -->
+
+<style>
+.cubo_4:nth-last-child(2){background-color: yellow; color:black }
+</style>
+
+<p>.cubo_4:nth-last-child(2){background-color: yellow; color:black; }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_4">1</div>
+<div id="dois" class="cubo_4">2</div>
+<div id="tres" class="cubo_4">3</div>
+<div id="quatro" class="cubo_4">4</div>
+<div id="cinco" class="cubo_4">5</div>
+<div id="seis" class="cubo_4">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Selecione todos os elementos ímpares da class ‘cubo’." -->
+
+<style>
+.cubo_5:nth-child(odd){background-color: yellow; color:black }
+</style>
+
+<p>.cubo_5:nth-child(odd){background-color: yellow; color:black; }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_5">1</div>
+<div id="dois" class="cubo_5">2</div>
+<div id="tres" class="cubo_5">3</div>
+<div id="quatro" class="cubo_5">4</div>
+<div id="cinco" class="cubo_5">5</div>
+<div id="seis" class="cubo_5">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Selecione todos os elementos pares da class ‘cubo’." -->
+
+<style>
+.cubo_6:nth-child(even){background-color: yellow; color:black }
+</style>
+
+<p>.cubo_6:nth-child(even){background-color: yellow; color:black; }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_6">1</div>
+<div id="dois" class="cubo_6">2</div>
+<div id="tres" class="cubo_6">3</div>
+<div id="quatro" class="cubo_6">4</div>
+<div id="cinco" class="cubo_6">5</div>
+<div id="seis" class="cubo_6">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Selecione todos os elementos a partir do 3° em diante." -->
+
+<style>
+.cubo_7:nth-child(n+3){background-color: yellow; color:black }
+</style>
+
+<p>.cubo_7:nth-child(n+3){background-color: yellow; color:black; }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_7">1</div>
+<div id="dois" class="cubo_7">2</div>
+<div id="tres" class="cubo_7">3</div>
+<div id="quatro" class="cubo_7">4</div>
+<div id="cinco" class="cubo_7">5</div>
+<div id="seis" class="cubo_7">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Selecione o 3° elemento e subtraía 1, ficando com o 2° elemento da posição." -->
+
+<style>
+.cubo_8:nth-child(3n-1){background-color: yellow; color:black }
+</style>
+
+<p>.cubo_8:nth-child(3n-1){background-color: yellow; color:black; }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_8">1</div>
+<div id="dois" class="cubo_8">2</div>
+<div id="tres" class="cubo_8">3</div>
+<div id="quatro" class="cubo_8">4</div>
+<div id="cinco" class="cubo_8">5</div>
+<div id="seis" class="cubo_8">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Selecione o 3° elemento e adicione 1, ficando com o 4° elemento. (Se o 4° não existir, volta para o primeiro)." -->
+
+<style>
+.cubo_9:nth-child(3n+1){background-color: yellow; color:black }
+</style>
+
+<p>.cubo_9:nth-child(3n+1){background-color: yellow; color:black; }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_9">1</div>
+<div id="dois" class="cubo_9">2</div>
+<div id="tres" class="cubo_9">3</div>
+<div id="quatro" class="cubo_9">4</div>
+<div id="cinco" class="cubo_9">5</div>
+<div id="seis" class="cubo_9">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Seleciona apenas o 5° elemento." -->
+
+<style>
+.cubo_10:nth-child(5n){background-color: yellow; color:black }
+</style>
+
+<p>.cubo_10:nth-child(5n){background-color: yellow; color:black; }</p>
+
+<section class="bot">
+
+<div id="um" class="cubo_10">1</div>
+<div id="dois" class="cubo_10">2</div>
+<div id="tres" class="cubo_10">3</div>
+<div id="quatro" class="cubo_10">4</div>
+<div id="cinco" class="cubo_10">5</div>
+<div id="seis" class="cubo_10">6</div>
+
+</section>
+
+<hr />
+
+<!-- Função: "Selecione todos os elementos que vem antes do 3° elemento." -->
+
+<style>
+.cubo_11:nth-child(-n+3){background-color: yellow; color:black }
+</style>
+
+<p>.cubo_11:nth-child(-n+3){background-color: yellow; color:black; }</p>
+
+<section class="bot mb-60">
+
+<div id="um" class="cubo_11">1</div>
+<div id="dois" class="cubo_11">2</div>
+<div id="tres" class="cubo_11">3</div>
+<div id="quatro" class="cubo_11">4</div>
+<div id="cinco" class="cubo_11">5</div>
+<div id="seis" class="cubo_11">6</div>
+
+</section>
+
+
+
+</body>
+</html>
